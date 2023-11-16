@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Puppy Love Cafe</title>
+</head>
+<body>
+    <header>
+        <nav>
+<!--            <div class="logo">-->
+<!--                <img src="logo.png" alt="Puppy Love Cafe Logo">-->
+<!--            </div>-->
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to The Puppy Love Cafe</h1>
+            <p>Your go-to place for delicious meals and dog-friendly dining.</p>
+            <a href="#menu" class="btn-explore">Explore Our Menu</a>
+        </div>
+    </section>
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <h3>Paw-tato Skins</h3>
+            <p>Crispy potato skins with cheese and bacon. - $8.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Kitty Caprese</h3>
+            <p>Tomato, mozzarella, basil, and balsamic glaze. - $10.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Bunny Bites</h3>
+            <p>Miniature vegetable spring rolls. - $7.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Pug Burger</h3>
+            <p>Classic cheeseburger with fries. - $12.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Meow Meow Tacos</h3>
+            <p>Soft tacos with your choice of filling. - $11.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Bark-B-Q Ribs</h3>
+            <p>Tender BBQ ribs with coleslaw. - $14.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Fluffy Frittata</h3>
+            <p>Fluffy omelet with seasonal vegetables. - $9.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Puppy Dog Pasta</h3>
+            <p>Pasta with butter or marinara sauce. - $6.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Mini Moo Burgers</h3>
+            <p>Miniature cheeseburgers with fries. - $7.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Bunny Bliss</h3>
+            <p>Carrot cake with cream cheese frosting. - $6.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Cocoa Cuddle</h3>
+            <p>Hot cocoa with marshmallows. - $3.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Doggy Chino</h3>
+            <p>Coffee with a doggy twist. - $4.99</p>
+        </div>
+    </section>
+
+     <div id="chatbot-container" class="draggable">
+        <iframe id="chatbot-iframe" width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/59949471-b076-4ded-b78f-b27850099b8c"></iframe>
+        <div id="resize-handle"></div>
+    </div>
+
+    <script>
+        const chatbotContainer = document.getElementById('chatbot-container');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        chatbotContainer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - chatbotContainer.getBoundingClientRect().left;
+            offsetY = e.clientY - chatbotContainer.getBoundingClientRect().top;
+            chatbotContainer.style.transition = 'none';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+
+            const newX = e.clientX - offsetX;
+            const newY = e.clientY - offsetY;
+
+            chatbotContainer.style.left = `${newX}px`;
+            chatbotContainer.style.top = `${newY}px`;
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            chatbotContainer.style.transition = '0.3s ease-in-out'; // Add transition back
+        });
+    </script>
+    <footer>
+        <div class="footer-content">
+            <h2>Contact Us</h2>
+            <address>
+                <p>123 Doggy Lane,</p>
+                <p>Petville, PA 12345</p>
+            </address>
+            <p>Email: info@puppylovecafe.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+</body>
+</html>

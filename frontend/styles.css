@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8e9c5;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #ffcccb;
+    padding: 20px 0;
+    position: fixed; /* Fixed header for easy navigation */
+    width: 100%; /* Full-width header */
+    z-index: 1000; /* Ensure the header is on top of other content */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo styles */
+header .logo img {
+    height: 40px;
+    display: block;
+}
+
+/* Menu styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #300;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Contact information styles */
+.contact-info {
+    margin-right: 20px;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+/* Hero section styles */
+.hero {
+    background-image: url("aesthetic-blush-pink-background-gk33qzqm891oqhr5.jpg"); /* Replace with your actual background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0; /* Increase the top and bottom padding */
+}
+
+/* Adjust the font size for the hero content */
+.hero h1 {
+    font-size: 48px; /* Increase the font size */
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px; /* Increase the font size */
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.btn-explore {
+    background-color: #ff6464;
+    color: #fff;
+    padding: 12px 24px; /* Increase the padding */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-explore:hover {
+    background-color: #e64444;
+}
+
+/* Menu section styles */
+.menu-section {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.menu-item {
+    margin: 20px 0;
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #ffcccb;
+    padding: 10px;
+}
+
+footer .footer-content {
+    color: #333;
+}
+
+footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+address {
+    font-style: normal;
+    font-size: 16px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    header .logo img {
+        height: 40px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn-explore {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .menu-item h3 {
+        font-size: 18px;
+    }
+
+    .menu-item p {
+        font-size: 14px;
+    }
+}
+
+.menu-section {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.menu-item {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Add some spacing between menu items */
+.menu-item + .menu-item {
+    margin-top: 40px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .menu-item h3 {
+        font-size: 20px;
+    }
+
+    .menu-item p {
+        font-size: 16px;
+    }
+}
+
+iframe#chatbot-iframe {
+            position: fixed;
+            bottom: 20px; /* Adjust the distance from the bottom as needed */
+            right: 20px; /* Adjust the distance from the right as needed */
+            z-index: 9999; /* Ensure it appears above other content */
+        }
+
+        #chatbot-container {
+            position: absolute;
+            z-index: 9999;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            resize: both;
+            overflow: auto;
+        }
+
+        /* Styles for the resize handle */
+        #resize-handle {
+            width: 12px;
+            height: 12px;
+            background-color: #007bff; /* Set your desired handle color */
+            cursor: nwse-resize; /* Use a resize cursor to indicate interactivity */
+        }.draggable {
+            cursor: move;
+        }
