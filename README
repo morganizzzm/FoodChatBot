@@ -44,7 +44,7 @@ prerequisites installed:
 ====================Installation======================
 1. clone the project repository:
 
-git clone https://github.com/yourusername/foodchatbot.git
+git clone https://github.com/morganizzzm/foodchatbot.git
 cd foodchatbot
 
 2. Create a virtual environment (recommended):
